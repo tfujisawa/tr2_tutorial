@@ -1,4 +1,5 @@
 #An introduction to the tr2 delimitation
+##Overview
 
 The trinomial distribution of triplet (tr2) model is a method for multilocus species delimitation. It measures concordance/discordance of gene trees and finds the best delimitation based on a distribution model of rooted triplets.
 
@@ -132,3 +133,16 @@ plot(tr, show.node.label=T)
 The delimitation result is mappned on the guide tree. Nodes indicated by "*"'s define species. Descendants of those nodes are clustered into species. Positive values on nodes indicate that these branching are between-species branching. Negative values are within-species.
 
 Just compare this result with [Fujisawa et al (2016)](https://academic.oup.com/view-large/figure/90603751/syw028f6.png). The figure ... says that with 17 loci the estimated number of species are between 3 and 4. Random resolution of nodes sometimes introduces uncertainty on the result. However, overall patterns are consistent.
+
+
+###When more complex models are required
+Tr2 (and most delimitation programs) assumes a simple multi-species coalescent model, where no migration between species occurs. In some situations, it is more reasonable to assume that focul populations (or species) are connected by gene flow. 
+
+Multispecies coalescent model with migration is complex and a rapid approximate method like tr2 is not available. One option to model species delimitation with migration is PHRAPL (Jackson et al. 2017). Instead of modeling approximate distribution of gene trees like tr2, PHRAPL uses simulations of multilocus gene trees to compare alternative models of delimitation and to estimate migration. It is reported that it outperforms simple methods when gene flow exists.
+
+PHRAPL requires rooted gene trees for delimitation. So, the trees used for tr2 delimitation can be  directly used as its input.
+
+See its [website](http://www.phrapl.org/) and papers [Jackson et al. (2017)](https://academic.oup.com/sysbio/article-abstract/66/6/1045/2999288) for its theory and applications.
+
+
+ 
