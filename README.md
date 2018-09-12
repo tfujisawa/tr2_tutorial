@@ -1,5 +1,5 @@
-#An introduction to the tr2 delimitation
-##Overview
+# An introduction to the tr2 delimitation
+## Overview
 
 The trinomial distribution of triplet (tr2) model is a method for multilocus species delimitation. It measures concordance/discordance of gene trees and finds the best delimitation based on a distribution model of rooted triplets.
 
@@ -7,12 +7,12 @@ Detailed description of the method is is the following paper:
 
 Fujisawa, T., Aswad, A. and Barraclough, T.G. (2016) A rapid and scalable method for multilocus species delimitation using Bayesian model  comparison and rooted triplets. Syst.Biol. 65(5): 759-771. [link](https://academic.oup.com/sysbio/article/65/5/759/2223552)
 
-##Software dependecies
+## Software dependecies
 * Python packages: numpy and scipy
 
 * Program for building a guide tree: triplec <http://www.cibiv.at/software/triplec/>
 
-##Installation
+## Installation
 The tr2 does not require a special procedure for installation. You can download files of tr2 from its repository.
 
  <https://bitbucket.org/tfujisawa/tr2-delimitation-python3>
@@ -33,32 +33,32 @@ If you have an environment with Mercurial installed, you can clone the repositor
 $ hg clone https://tfujisawa@bitbucket.org/tfujisawa/tr2-delimitation-python3
 ```
 
-##Basic command line
+## Basic command line
 
 ```
 $ run_tr2.py -t genetree.tre -g guide.tre -o outputname
 ```
 
 
-####input:
+#### input:
 The tr2 requires tree files in Newick format.
 * The input indivudual gene trees are in Newick format. **_Trees must be rooted. (Using unrooted trees significantly biases the results.)_** The file must contain one tree per one line.
 * The input guide tree is also in Newick. Only first tree is used if the file contains multiple trees. The guide tree must also be rooted. The guide tree does not have to contain all individual samples in gene trees. When individuals are missing, they are simply ignored in the delimitation.
 
-####output:
+#### output:
 The tr2 output two files.
 * A tab-delimited text of species delimitation
 * A tree annotated with delimitation results in Newick format.
 
 When the "-o" option is given, files, *.table.txt and *.tre, are created. If the "-o" option is omitted, results are output in the console.
 
-##An example with Sistrurus rattle snake data
+## An example with Sistrurus rattle snake data
 
 The Sistrurus data set contains sequence alingments of 19 loci sampled from two species (and six subspecies) of *Sistrurus* rattle snakes. [Kubatko et al. (2011)](https://academic.oup.com/sysbio/article/60/4/393/1605022) inferred species-level phylogeny and tested their species status. They reported that one subspecies, *S. catenatus catenatus* has distinct species status, but other subspecies did not. We reanalyse this data set.
 
 The alignments and reconstructed trees are available from its TreeBase site <https://www.treebase.org/treebase-web/search/study/summary.html?id=11174>.
 
-###Tree reconstruction
+### Tree reconstruction
 
 First, reconstruct gene trees from alignments with RAxML. We use the "-f d" option to run a rapid search to reduce execusion time.
 Outgroups are specified with "-o" option.
@@ -101,8 +101,8 @@ Check the raxml outputs. We only have 17 gene trees because some outgroup sample
 
 Now, we are ready to run the tr2.
 
-###Delimitation
-###Inference with gene trees
+### Delimitation
+### Inference with gene trees
 ```
 ~/tr2-delimitation-python3/run_tr2.py -t raxml.all.tre
 ```
@@ -149,7 +149,7 @@ Once you have a guide tree, you can give it to tr2 by "-g" option.
 $ run_tr2.py -t raxml.all.tre -g raxml.all.tre_rtc
 ```
 
-###Testing alternative assingments
+### Testing alternative assingments
 Tr2 provides a command to test user-defined species assingments.
 ```
 $ run_tr2.py -t raxml.all.tre -a sistrurus.hypothesis.txt
@@ -186,7 +186,7 @@ model2	9913.25
 model3	10761.62
 ```
 
-##When more complex models are required
+## When more complex models are required
 Tr2 (and most delimitation programs) assumes a simple multi-species coalescent model, where no migration between species occurs. In some situations, it is more reasonable to assume that focul populations (or species) are connected by gene flow.
 
 Multispecies coalescent model with migration is complex and a rapid approximate method like tr2 is not available. One option to model species delimitation with migration is PHRAPL (Jackson et al. 2017). Instead of modeling approximate distribution of gene trees like tr2, PHRAPL uses simulations of multilocus gene trees to compare alternative models of delimitation and to estimate migration. It is reported that it outperforms simple methods when gene flow exists.
