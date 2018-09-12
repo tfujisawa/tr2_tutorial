@@ -64,14 +64,14 @@ First, reconstruct gene trees from alignments with RAxML. We use the "-f d" opti
 Outgroups are specified with "-o" option.
 
 ```
-raxml -m GTRGAMMA -T 2 -f d -p 12345 -s sistrurus.ATP.fasta -n ATP -o Agkistrodon_contortrix_1,Agkistrodon_contortrix_2,Agkistrodon_piscivorus_1,Agkistrodon_piscivorus_2
+raxmlHPC -m GTRGAMMA -T 2 -f d -p 12345 -s sistrurus.ATP.fasta -n ATP -o Agkistrodon_contortrix_1,Agkistrodon_contortrix_2,Agkistrodon_piscivorus_1,Agkistrodon_piscivorus_2
 ```
 
 This command works only when outgroups are available. If you do not have infromative outgroups, use a rooting command of RAxML.
 
 ```
-$ raxml -m GTRGAMMA -T 2 -f a -p 12345 -s sistrurus.ATP.fasta -# 100 -x 100 -n ATP
-$ raxml -f I -m GTRGAMMA -t RAxML_bipartitions.ATP -n ATP
+$ raxmlHPC -m GTRGAMMA -T 2 -f a -p 12345 -s sistrurus.ATP.fasta -# 100 -x 100 -n ATP
+$ raxmlHPC -f I -m GTRGAMMA -t RAxML_bipartitions.ATP -n ATP
 ```
 
 Rooting trees without outgroups sometimes introduces errors. However, it often has a reasonable accuracy.
@@ -81,7 +81,7 @@ Automate the reconstruction with a Shell script to run all 19 reconstruction pro
 #! /bin/bash
 for sq in "$@"
 do
-	raxml -m GTRGAMMA -T 2 -f d -p 12345 -s $sq -n ${sq//.fasta} -o  Agkistrodon_contortrix_1,Agkistrodon_contortrix_2,Agkistrodon_piscivorus_1,Agkistrodon_piscivorus_2
+	raxmlHPC -m GTRGAMMA -T 2 -f d -p 12345 -s $sq -n ${sq//.fasta} -o  Agkistrodon_contortrix_1,Agkistrodon_contortrix_2,Agkistrodon_piscivorus_1,Agkistrodon_piscivorus_2
 done
 ```
 
