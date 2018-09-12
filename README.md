@@ -94,7 +94,7 @@ $ ./run.raxml.sh sistrurus.*.fasta
 Just check if all trees are correctly reconstructed and rooted.
 Then, concatenate all trees into a single file by the "cat" unix command.
 ```
-$ cat RAxML_bipartitions.* > raxml.all.tre
+$ cat RAxML_bestTree* > raxml.all.tre
 ```
 
 Check the raxml outputs. We only have 17 gene trees because some outgroup samples are missing from two files. For now, we ignore these two loci, but alternative rooting methods can be used for these two loci.
@@ -191,6 +191,6 @@ Tr2 (and most delimitation programs) assumes a simple multi-species coalescent m
 
 Multispecies coalescent model with migration is complex and a rapid approximate method like tr2 is not available. One option to model species delimitation with migration is PHRAPL (Jackson et al. 2017). Instead of modeling approximate distribution of gene trees like tr2, PHRAPL uses simulations of multilocus gene trees to compare alternative models of delimitation and to estimate migration. It is reported that it outperforms simple methods when gene flow exists.
 
-PHRAPL requires rooted gene trees for delimitation. So, the trees used for tr2 delimitation can be  directly used as its input.
+PHRAPL requires rooted gene trees for delimitation. So, the trees used for tr2 delimitation can be readly used as its input.
 
-See its [website](http://www.phrapl.org/) and papers [Jackson et al. (2017)](https://academic.oup.com/sysbio/article-abstract/66/6/1045/2999288) for its theory and applications.
+See its [website](http://www.phrapl.org/) and papers [Jackson et al. (2017)](https://academic.oup.com/sysbio/article-abstract/66/6/1045/2999288) for its theory and applications. 
