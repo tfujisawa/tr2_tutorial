@@ -17,20 +17,24 @@ The tr2 does not require a special procedure for installation. You can download 
 
  <https://bitbucket.org/tfujisawa/tr2-delimitation-python3>
 
+There are two version of tr2, python2 and python3. I recommend the python3 version unless you have special reasons to use python2.
+
+The python2 version is available in its repository.
+
+<https://bitbucket.org/tfujisawa/tr2-delimitation>
+
+If you have an environment with Mercurial installed, you can clone the repository.
+
+```
+$ hg clone https://tfujisawa@bitbucket.org/tfujisawa/tr2-delimitation-python3
+```
+
 Then, put the tr2-delimitation directory wherever you want. If you want to run Triplec, download the Triplec.jar from its website <http://www.cibiv.at/software/triplec/>, then create a directory named "bin" in the tr2-delimitation directory and put the Triplec.jar in the created "bin" directory.
 
 You can download the triplec.jar with "wget" command.
 ```
 $ cd tr2-delimitation/bin
 $ wget http://www.cibiv.at/software/triplec/Triplec.jar
-```
-
-There are two version of tr2, python2 and python3. I recommend the python3 version unless you have special reasons to use python2.
-
-If you have an environment with Mercurial installed, you can clone the repository.
-
-```
-$ hg clone https://tfujisawa@bitbucket.org/tfujisawa/tr2-delimitation-python3
 ```
 
 ## Basic command line
@@ -51,6 +55,12 @@ The tr2 output two files.
 * A tree annotated with delimitation results in Newick format.
 
 When the "-o" option is given, files, *.table.txt and *.tre, are created. If the "-o" option is omitted, results are output in the console.
+
+A simple test with simulated test data.
+
+```
+$ ./run_tr2.py -t sim4sp/simulated.gene.trees.nex10.4sp.tre
+```
 
 ## An example with Sistrurus rattle snake data
 
