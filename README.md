@@ -19,9 +19,10 @@ The tr2 does not require a special procedure for installation. You can download 
 
 There are two version of tr2, python2 and python3. I recommend the python3 version unless you have special reasons to use python2.
 
-The python2 version is available in its repository.
+**In this tutorial, we use python2 version.** The python2 version is available in its repository.
 
 <https://bitbucket.org/tfujisawa/tr2-delimitation>
+
 
 If you have an environment with Mercurial installed, you can clone the repository.
 
@@ -37,9 +38,11 @@ $ git clone https://github.com/tfujisawa/tr2-delimitation-git.git
 
 Then, put the tr2-delimitation directory wherever you want. If you want to run Triplec, download the Triplec.jar from its website <http://www.cibiv.at/software/triplec/>, then create a directory named "bin" in the tr2-delimitation directory and put the Triplec.jar in the created "bin" directory.
 
-You can download the triplec.jar with "wget" command.
+You can download the triplec.jar with "wget" command in tr2-delimitation/bin directory.
+
 ```
-$ cd tr2-delimitation/bin
+$ mkdir bin
+$ cd bin
 $ wget http://www.cibiv.at/software/triplec/Triplec.jar
 ```
 
