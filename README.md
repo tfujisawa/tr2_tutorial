@@ -29,6 +29,12 @@ If you have an environment with Mercurial installed, you can clone the repositor
 $ hg clone https://tfujisawa@bitbucket.org/tfujisawa/tr2-delimitation-python3
 ```
 
+Or, clone from Github mirror with git.
+
+```
+$ git clone https://github.com/tfujisawa/tr2-delimitation-git.git
+```
+
 Then, put the tr2-delimitation directory wherever you want. If you want to run Triplec, download the Triplec.jar from its website <http://www.cibiv.at/software/triplec/>, then create a directory named "bin" in the tr2-delimitation directory and put the Triplec.jar in the created "bin" directory.
 
 You can download the triplec.jar with "wget" command.
@@ -60,6 +66,12 @@ A simple test with simulated test data.
 
 ```
 $ ./run_tr2.py -t sim4sp/simulated.gene.trees.nex10.4sp.tre
+```
+
+When you call run_tr2.py from outside of "tr2-delimitation" directory, specify full-path to the tr2 directory. For example, assuming the tr2 directory is in the home directory, /home/tfujisawa
+
+```
+$ /home/tfujisawa/tr2-delimitation/run_tr2.py -t ...
 ```
 
 ## An example with Sistrurus rattle snake data
