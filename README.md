@@ -79,7 +79,7 @@ $ /home/tfujisawa/tr2-delimitation/run_tr2.py -t ...
 
 ## An example with Sistrurus rattle snake data
 
-The Sistrurus data set contains sequence alingments of 19 loci sampled from two species (and six subspecies) of *Sistrurus* rattle snakes. [Kubatko et al. (2011)](https://academic.oup.com/sysbio/article/60/4/393/1605022) inferred species-level phylogeny and tested their species status. They reported that one subspecies, *S. catenatus catenatus* has distinct species status, but other subspecies did not. We reanalyse this data set.
+The Sistrurus data set contains sequence alingments of 19 loci sampled from two species (including six subspecies) of *Sistrurus* rattle snakes. [Kubatko et al. (2011)](https://academic.oup.com/sysbio/article/60/4/393/1605022) inferred species-level phylogeny and tested their species status. They reported that one subspecies, *S. catenatus catenatus* has distinct species status, but other subspecies did not. We reanalyse this data set.
 
 The alignments and reconstructed trees are available from its TreeBase site <https://www.treebase.org/treebase-web/search/study/summary.html?id=11174>.
 
