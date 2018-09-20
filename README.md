@@ -1,4 +1,5 @@
 # An introduction to the tr2 delimitation
+
 ## Overview
 
 The trinomial distribution of triplet (tr2) model is a method for multilocus species delimitation. It measures concordance/discordance of gene trees and finds the best delimitation based on a distribution model of rooted triplets.
@@ -11,6 +12,16 @@ Fujisawa, T., Aswad, A. and Barraclough, T.G. (2016) A rapid and scalable method
 * Python packages: numpy and scipy
 
 * Program for building a guide tree: triplec <http://www.cibiv.at/software/triplec/>
+
+
+## How to clone this tutorial
+
+To start, first clone this tutorial site to download data and scripts.
+
+```
+git clone https://github.com/tfujisawa/tr2_tutorial.git
+```
+
 
 ## Installation
 The tr2 does not require a special procedure for installation. You can download files of tr2 from its repository.
