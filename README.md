@@ -135,12 +135,14 @@ $ cat RAxML_bestTree* > raxml.all.tre
 
 Check the raxml outputs. We only have 17 gene trees because some outgroup samples are missing from two files. For now, we ignore these two loci, but alternative rooting methods can be used for these two loci.
 
-Now, we are ready to run the tr2.
+Now, we are ready to run the tr2. 
+
+The RAxML trees are stored in "sistrurus.all_tree.tre".
 
 ### Delimitation
 ### Inference with gene trees
 ```
-~/tr2-delimitation-python3/run_tr2.py -t raxml.all.tre
+~/tr2-delimitation-python3/run_tr2.py -t sistrurus.all_tree.tre
 ```
 This command excute a delimitation from gene trees. First, it creates a consensus tree using triplec program, then find the best delimitation on the consensus tree.
 
@@ -182,13 +184,13 @@ Just compare this result with [the results in Fujisawa et al (2016)](https://aca
 
 Once you have a guide tree, you can give it to tr2 by "-g" option.
 ```
-$ run_tr2.py -t raxml.all.tre -g raxml.all.tre_rtc
+$ run_tr2.py -t sistrurus.all_tree.tre -g raxml.all.tre_rtc
 ```
 
 ### Testing alternative assingments
 Tr2 provides a command to test user-defined species assingments.
 ```
-$ run_tr2.py -t raxml.all.tre -a sistrurus.hypothesis.txt
+$ run_tr2.py -t sistrurus.all_tree.tre -a sistrurus.hypothesis.txt
 ```
 
 The "-a" option needs a tab-delimited assignment file. The first column of table is names of samples and the second and so forth are alternative assignments.
