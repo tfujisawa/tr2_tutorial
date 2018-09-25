@@ -146,13 +146,13 @@ The RAxML trees are stored in "sistrurus.all_tree.tre".
 ```
 This command excute a delimitation from gene trees. First, it creates a consensus tree using triplec program, then find the best delimitation on the consensus tree.
 
-You can save the outputs into files by using -o option.
+You can save the outputs into files by using "-o" option.
 ```
 ~/tr2-delimitation-python3/run_tr2.py -t sistrurus.all_tree.tre -o sistrurus.delimit
 ```
 The above command writes down two files, sistrurus.delimit.table.txt and sistrurus.delmit.tre.
 
-Major outputs are a table of delimitation (*.table.txt) and an annotated tree (*.tre).
+Major outputs are a table of delimitation (.table.txt) and an annotated tree (.tre).
 The table shows assingnments of species membership to individual samples.
 ```
 species	sample
