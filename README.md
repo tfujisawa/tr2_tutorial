@@ -4,7 +4,7 @@
 
 The trinomial distribution of triplet (tr2) model is a method for multilocus species delimitation. It measures concordance/discordance of gene trees and finds the best delimitation based on a distribution model of rooted triplets.
 
-Detailed description of the method is is the following paper:
+Detailed description of the method is the following paper:
 
 Fujisawa, T., Aswad, A. and Barraclough, T.G. (2016) A rapid and scalable method for multilocus species delimitation using Bayesian model  comparison and rooted triplets. Syst.Biol. 65(5): 759-771. [link](https://academic.oup.com/sysbio/article/65/5/759/2223552)
 
