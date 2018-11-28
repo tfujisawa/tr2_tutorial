@@ -123,7 +123,7 @@ done
 
 Save these lines in run.raxml.root.sh and run it after giving them a permission for execusion.
 ```
-$ chmod +x run.raxml.sh
+$ chmod +x run.raxml.root.sh
 $ ./run.raxml.sh sistrurus.*.fasta
 ```
 
